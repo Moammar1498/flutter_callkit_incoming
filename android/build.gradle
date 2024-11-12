@@ -27,22 +27,24 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    namespace "com.hiennv.flutter_callkit_incoming" // declare directly
     compileSdk 34
+if (project.android.hasProperty("namespace")) {
+    namespace "com.hiennv.flutter_callkit_incoming"
+}
 
-    sourceSets {
-        main.java.srcDirs += 'src/main/kotlin'
-    }
-    defaultConfig {
-        minSdk 16
-        targetSdk 34
+sourceSets {
+    main.java.srcDirs += 'src/main/kotlin'
+}
+defaultConfig {
+    minSdk 23
+    targetSdk 34
 
-        consumerProguardFiles 'consumer-rules.pro'
-    }
-    compileOptions {                                                               
-        sourceCompatibility JavaVersion.VERSION_17   
-        targetCompatibility JavaVersion.VERSION_17       
-    }
+    consumerProguardFiles 'consumer-rules.pro'
+}
+compileOptions {              
+    sourceCompatibility JavaVersion.VERSION_17
+    targetCompatibility JavaVersion.VERSION_17
+}
 }
 
 dependencies {
