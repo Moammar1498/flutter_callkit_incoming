@@ -42,9 +42,9 @@ android {
 
         consumerProguardFiles 'consumer-rules.pro'
     }
-    compileOptions {                                                              <<<<<<<<< change
-    sourceCompatibility JavaVersion.VERSION_17         <<<<<<<<<<change
-    targetCompatibility JavaVersion.VERSION_17         <<<<<<<<<<<change
+    compileOptions {                                                               
+    sourceCompatibility JavaVersion.VERSION_17   
+    targetCompatibility JavaVersion.VERSION_17       
     }
 }
 
